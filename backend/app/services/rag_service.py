@@ -1,13 +1,10 @@
-from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
-from dotenv import load_dotenv
-load_dotenv()
+from langchain_community.embeddings import FakeEmbeddings
+
 from app.utils.chunking import chunk_text
 
-embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+embedding_model = FakeEmbeddings(size=384)
 
 vector_store = Chroma(
     persist_directory="chroma_db",

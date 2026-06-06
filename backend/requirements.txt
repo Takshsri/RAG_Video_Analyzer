@@ -5,7 +5,6 @@ langchain
 langchain-community
 langchain-openai
 chromadb
-sentence-transformers
 youtube-transcript-api
 google-api-python-client
 groq
